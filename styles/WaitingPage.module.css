@@ -1,0 +1,118 @@
+.body{
+  display: block;
+  background-color: #fcfcfc;
+}
+.p{
+    font-family: Poppins;
+}
+.healthkare{
+    width: 190px;
+  height: 48px;
+  position: absolute;
+  top: 34px;
+  left: 46px;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: white;
+}
+  .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background-color: #fff;
+    outline: 2px solid rgba(44, 105, 117, 1);
+
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%; /* Adjusted width to 25% */
+  }
+  
+  .popupContent {
+    text-align: center;
+  }
+  
+  .popupContent h2 {
+    margin-bottom: 20px;
+  }
+  
+  .popupContent hr {
+    background-color: red;
+    height: 2px;
+    width: 100%;
+  }
+  
+  .popupContent img {
+    max-width: 100%;
+    display: block;
+    
+    border-radius: 20px;
+    margin: auto;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  display: flex; /* Use flexbox */
+  align-items: center;/* Align form elements to the left */
+  }
+  
+  .formGroup label {
+    flex: 1; /* Allow label to grow */
+  margin-right: 10px; 
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    flex: 2; /* Allow input to grow */
+  width: 100%;
+  }
+  .popupTitle{
+    color:  rgba(44, 105, 117, 1);
+    ;
+  }
+  .button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+ 
+.image2{
+display: block; 
+/* top: -190px;
+right: -100px; */
+margin: 350px 0px 10px 0px;  
+width: 200px;
+    height: auto; 
+}
+.image3 {
+position: absolute;
+top: -190px;
+right: -100px;
+width: 200px;
+height: auto;
+transform: translate(-50%, 50%);
+}
+
