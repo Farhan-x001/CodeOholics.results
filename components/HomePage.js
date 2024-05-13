@@ -14,23 +14,57 @@ const HomePage = () => {
     },
     {
       id: 2,
-      title: "Data Structures and Algorithms Course",
+      title: "DSA from scratch",
       subTitle: "Learn DSA from scratch with CodeOholics!",
-      videoUrl: "https://www.youtube.com/embed/xXKL9YBWgCY?si=DpfE-0Qz7aUGO5Vd",
+      videoUrl: "https://www.youtube.com/embed/videoseries?si=JvQwHLoxN5aniToV&amp;list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz",
     },
     {
       id: 3,
-      title: "Data Structures and Algorithms Course",
+      title: "DP - aditya verma",
       subTitle: "Learn DSA from scratch with CodeOholics!",
-      videoUrl: "https://www.youtube.com/embed/xXKL9YBWgCY?si=DpfE-0Qz7aUGO5Vd",
+      videoUrl: "https://www.youtube.com/embed/nqowUJzG-iM?si=kuwhlm2XU9SJJfQa",
     },
     {
       id: 4,
-      title: "Data Structures and Algorithms Course",
+      title: "DEVops",
       subTitle: "Learn DSA from scratch with CodeOholics!",
-      videoUrl: "https://www.youtube.com/embed/xXKL9YBWgCY?si=DpfE-0Qz7aUGO5Vd",
+      videoUrl: "https://www.youtube.com/embed/ZbG0c87wcM8?si=QRnUA_bwEl2Kebs4",
     },
     // Add more video data as needed
+  ];
+  const boxData = [
+    {
+      id: 1,
+      title: "Code With harry",
+      link: "https://www.codewithharry.com/",
+      imageSrc: "/images/ab1.png",
+      altText: "Icon 1",
+      description: "Strivers DSA A-Z",
+    },
+    {
+      id: 2,
+      title: "Roadmap SDE2024",
+      link: "https://github.com/KushalVijay/GetHiredRoadmap2024",
+      imageSrc: "/images/db1.png",
+      altText: "Icon 2",
+      description: "geeksforgeeks archives",
+    },
+    {
+      id: 3,
+      title: "Projects At ease",
+      link: "https://www.youtube.com/@LamaDev",
+      imageSrc: "/images/mb1.png",
+      altText: "Icon 3",
+      description: "Interview bit",
+    },
+    {
+      id: 3,
+      title: "microsoft-dev",
+      link: "https://github.com/microsoft/Web-Dev-For-Beginners",
+      imageSrc: "/images/mb1.png",
+      altText: "Icon 3",
+      description: "Interview bit",
+    },
   ];
   const dummyData = [
     {
@@ -104,51 +138,21 @@ const HomePage = () => {
           </ul>
         </nav>
         <div className="dashboard-data">
-          <div className="boxline">
-            <div className="box">
-              <a
-                href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/"
-                target="_blank"
-                >
-                <h2>Learn A to Z of DSA</h2>
-              </a>
-                {/* <Image
-                  src="/images/ab1.png"
-                  width={100}
-                  height={100}
-                  alt="Icon 1"
-                /> */}
-                {/* <p>Strivers DSA A-Z</p> */}
-            </div>
-            <div className="box">
-              <a
-                href="https://www.geeksforgeeks.org/tag/geeksforgeeks/"
-                target="_blank"
-                >
-                <h2>Be a GEEK!</h2>
-                {/* <Image
-                  src="/images/db1.png"
-                  width={100}
-                  height={100}
-                  alt="Icon 2"
-                />
-                <p>geeksforgeeks archives</p> */}
+          <div className="headtxt"><center><h1>Best resources for DSA & DEV</h1></center></div>
+        <div className="boxline">
+          {boxData.map((box) => (
+            <div key={box.id} className="box">
+              <a href={box.link} target="_blank" rel="noopener noreferrer">
+                <h2>{box.title}</h2>
+                <Image src={box.imageSrc} width={100} height={100} alt={box.altText} />
+                <p>{box.description}</p>
               </a>
             </div>
+          ))}
+        </div>
+        <div className="headtxt"><center><h1>Best youtube Series
+          </h1></center></div>
 
-            <div className="box">
-              <a href="https://www.interviewbit.com/" target="_blank">
-              <h2>DSA Boost</h2>
-                {/* <Image
-                  src="/images/mb1.png"
-                  width={100}
-                  height={100}
-                  alt="Icon 3"
-                />
-                <p>Interview bit</p> */}
-              </a>
-            </div>
-          </div>
           <div className="video-cards-grid">
             {videoData.map((video) => (
               <div key={video.id} className="video-card">
@@ -166,6 +170,26 @@ const HomePage = () => {
               </div>
             ))}
           </div>
+          <div className="headtxt"><center><h1>Best  resources for projects</h1></center></div>
+
+
+          <div className="video-cards-grid">
+  {boxData.map((box) => (
+    <div key={box.id} className="video-card">
+      <h2>{box.title}</h2>
+      <p>{box.subTitle}</p>
+      <a href={box.link}>
+        <img
+          src={box.imageSrc}
+          alt={box.title}
+          width="280"
+          height="157.5"
+        />
+      </a>
+    </div>
+  ))}
+</div>
+
         </div>
       </div>
     </div>

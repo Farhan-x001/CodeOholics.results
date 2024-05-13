@@ -155,3 +155,67 @@ ul.horizontalnavbar{
   border-radius: 8px;
   z-index: 1001; 
 }
+@media only screen and (max-width: 600px) {
+  .appointmentcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .viewMore {
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 6px 8px; /* Decreased padding */
+    border-radius: 3px; /* Decreased border radius */
+    cursor: pointer;
+    font-size: 22px; /* Decreased font size */
+  }
+  .card {
+    width: 350px;
+    height: 350px;
+  /* width: calc(25% - 80px);  */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.image {
+  width: 182px; /* One-fourth of 164px */
+  height: 171px; /* One-fourth of 142px */
+  margin: 0 auto 0px; /* Center the image and add bottom margin */
+  display: block;
+}
+.name {
+  /* margin-top: 2px; 
+  margin-bottom: 2px; */
+  font-size: 34px; /* Decreased font size */
+}
+.button {
+  width: 200px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #183b41;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  margin-left: 610px;
+  /* margin: 10px; */
+}
+.time {
+  font-style: italic;
+  margin-bottom: 2px; 
+  font-size: 12px; /* Decreased font size */
+}
+.designation {
+  font-style: italic;
+  /* margin-bottom: 0px; */
+  font-size: 30px; /* Decreased font size */
+}
+  
+}

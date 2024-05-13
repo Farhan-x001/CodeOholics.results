@@ -1,107 +1,241 @@
-/* ads.module.css */
+/* styles.module.css */
+ul.horizontalnavbar{
+  list-style: none;
+}
+.horizontalnavbar {
+  display: flex;
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+}
 
-.dragDropBlock {
-    width: 1025px;
-    height: 484px;
-    top: 223px;
-    left: 321px;
-    border-radius: 16px;
-    border: 1px solid #EF8C86;
-    background: #FFFFFF;
-    margin: 20px;
-    text-align: center;
+.horizontalnavbar li {
+  margin-right: 5px;
+}
 
-  }
-  
-  .borders {
-    border: 1px solid rgba(239, 140, 134, 1)
-  }
-  /* ads.module.css */
+.horizontalnavbar li:last-child {
+  margin-right: 0;
+}
 
-.fileButton {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 16px;
-    background: #EF8C86;
-    color: #FFFFFF;
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .cloudIcon {
-    width: 120px;
-    height: 96px;
-    top: 335px;
-    left: 785px;
-    padding: 6px 0;
-  }
-  
-  .fileInput {
-    width: 217px;
-    height: 30px;
-    top: 455px;
-    left: 737px;
-    text-align: center;
+.horizontalnavbar li a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #787575;
+  /* background-color: #ef8c86; */
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+}
 
-  }
-  
-  .button {
-    width: 205px;
-    height: 50px;
-    top: 515px;
-    left: 743px;
-    padding: 10px 20px;
-    border-radius: 16px;
-    gap: 20px;
-    background: #EF8C86;
-    color: #FFFFFF;
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
-  
-  @media (max-width: 767px) {
-    .button {
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .button {
-      width: auto;
-      margin-top: 0;
-    }
-  }
-  
-  .fileType {
-    
-    top: 605px;
-    left: 725px;
-    text-align: center;
+.horizontalnavbar li a:hover {
+  background-color:  #ef8c86;
+  color: #fff;
+}
+.card {
+  width: 1050px;
+  height: 300px;
+  margin: 10px;
+/* width: calc(25% - 80px);  */
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+text-align: left;
+margin-bottom: 20px;
+}
 
-  }
-  
-  .maxSize {
-    text-align: center;
+.image {
+width: 82px; /* One-fourth of 164px */
+height: 71px; /* One-fourth of 142px */
+margin: 0; /* Center the image and add bottom margin */
+display: block;
+}
+.appointmentcontainer {
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
+}
 
+.name {
+  margin-top: -70px;
+  margin-left: 120px; 
+ font-size: 28px; /* Decreased font size */
+ }
+
+ .time {
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 2px; 
+  margin-left: 90px;
+  line-height: 1.3;
+  font-size: 20px; /* Decreased font size */
   }
+  .designation {
+  font-style: italic;
+  margin-top: -20px;
+   margin-left: 130px; 
   
-  /* Ensure the p selector contains a local class or id */
-  .dragDropBlock p {
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
+  /* padding-bottom: 20px;
+  padding-left: 20px; */
+  font-size: 15px; /* Decreased font size */
   }
-  
+
+.viewMore {
+  float: right;
+  margin-top: -50px;
+background-color: green;
+color: white;
+border: none;
+padding: 6px 8px; /* Decreased padding */
+border-radius: 3px; /* Decreased border radius */
+cursor: pointer;
+font-size: 12px; /* Decreased font size */
+}
+.popup-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* .popup {
+background-color: rgb(177, 108, 108);
+text-align: center;
+max-width: 500px;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 30%;
+left: 40%;
+transform: translate(-50%, -50%);
+background-blend-mode: lighten;
+} */
+
+
+.popup-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.popup-content {
+/* Add your specific styles for content here */
+}
+
+.exit-btn {
+cursor: pointer;
+}
+.button {
+width: 100px;
+margin-right: 10px;
+padding: 10px;
+background-color: #183b41;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: left;
+margin-left: 610px;
+/* margin: 10px; */
+}
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+z-index: 1000; /* Ensure the overlay appears above other content */
+}
+
+.popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+z-index: 1001; 
+}
+@media only screen and (max-width: 600px) {
+.appointmentcontainer {
+  display: grid;
+  grid-template-columns: 1fr ;
+  gap: 20px;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+.viewMore {
+  float: right;
+  margin: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px; /* Decreased border radius */
+  cursor: pointer;
+  font-size: 22px; /* Decreased font size */
+}
+.card {
+  width: 1050px;
+  height: 400px;
+/* width: calc(25% - 80px);  */
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+text-align: left;
+margin-bottom: 20px;
+}
+.image {
+width: 82px; /* One-fourth of 164px */
+height: 71px; /* One-fourth of 142px */
+margin: 0; /* Center the image and add bottom margin */
+
+display: block;
+}
+.name {
+ margin-top: -70px;
+ margin-left: 120px; 
+font-size: 34px; /* Decreased font size */
+}
+.button {
+width: 200px;
+margin-right: 10px;
+padding: 10px;
+background-color: #183b41;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: left;
+margin-left: 610px;
+/* margin: 10px; */
+}
+.time {
+font-style: italic;
+letter-spacing: 1px;
+margin-bottom: 2px; 
+margin-left: 90px;
+line-height: 1.3;
+font-size: 28px; /* Decreased font size */
+}
+.designation {
+font-style: italic;
+margin-top: -20px;
+ margin-left: 130px; 
+
+/* padding-bottom: 20px;
+padding-left: 20px; */
+font-size: 30px; /* Decreased font size */
+}
+
+}

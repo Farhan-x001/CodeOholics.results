@@ -214,9 +214,10 @@ body {
   padding: 20px;
 }
 .box {
-  background: rgb(253,0,255);
+  
+  background: RGB(241, 0, 255) ;
   background: linear-gradient(340deg, rgba(253,0,255,1) 0%, rgba(158,0,255,1) 0%);
-  color: white;
+  color: rgb(255, 255, 255);
   border: 1.5px solid hsl(0, 9%, 83%); /* Set border color */
   border-radius: 15px;
   width: 335px; /* Set width */
@@ -234,6 +235,7 @@ body {
 }
 
 .box a{
+  
   color: white;
   opacity: 0.9;
   transition: ease 0.344s;
@@ -258,9 +260,9 @@ body {
   margin-bottom: 10px;
 }
 .box img {
-  float: left;
-  margin-left: 5px;
-  margin-top: -39px;
+  float: center;
+ 
+  margin-top: 0px;
   /* margin-bottom: 1px; */
 }
 
@@ -444,6 +446,49 @@ th {
   body {
     background-color: #7230b9; /* Set background color for smaller screens */
   }
+  .box {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px;
+    background: rgb(253,0,255);
+    background: linear-gradient(340deg, rgba(253,0,255,1) 0%, rgba(158,0,255,1) 0%);
+    color: white;
+    border: 1.5px solid hsl(0, 9%, 83%); /* Set border color */
+    border-radius: 15px;
+    width: 135px; /* Set width */
+    height: auto; /* Set height */
+    padding: 20px;
+    margin-right: 20px; 
+    opacity: 0.7;
+    transition: ease 0.344s;
+}
+
+.box:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    margin-right: 20px;
+}
+
+.box a {
+    color: white;
+    opacity: 0.9;
+    transition: ease 0.344s;
+}
+
+.box a:hover {
+    opacity: 1;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+  .box:last-child {
+    margin-right: 0; /* Remove margin for the last box */
+  }
+  
+  
+  
+  
   
   .healthkare {
     font-size: 20px; /* Adjust font size for healthkare */
@@ -544,19 +589,22 @@ th {
   
   .video-cards-grid {
     /* background: red; */
+    margin-left: 20px;
     display: grid; /* Use grid layout for the cards */
     grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
     justify-content: center;
     align-items: center;
     padding: 50px;
-    gap: 10px;
+    gap: 40px;
     overflow: scroll; /* Add scroll if needed */
   }
   
   /* Optional: Style individual video cards */
   .video-card {
+    width: 350px;
+    height: 340px;
     /* Add styles for each video card */
-    background-color: #f0f0f0; /* Example background color */
+    background-color: #92ba92; /* Example background color */
     padding: 20px; /* Adjust padding as needed */
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */

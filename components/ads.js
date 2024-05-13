@@ -2,45 +2,108 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/ads.module.css';
 import Image from 'next/image';
+import AddDoctorPopup from './AddDoctorPopup';
+import AppointmentDetailsPopup from './AppointmentDetailsPopup'; 
+
 
 const AdsPage = () => {
   const router = useRouter();
-  const [isDragging, setIsDragging] = useState(false);
-  const [uploadedFile, setUploadedFile] = useState(null);
+  const [showAddDoctorPopup, setShowAddDoctorPopup] = useState(false);
+  const handleViewMoreClick = (appointment) => {
+    setPopupAppointment(appointment);
+  };
+  const [dummyData, setDummyData] = useState([
+    {
+      SN: 1,
+      name: "Charan Narakula",
+      designation: "Founder-CodeOHOlics| Palo alto networks",
+      time: "Time management is crucial. Balancing academics, projects, and extracurricular activities can be challenging, but mastering this skill early on will set you up for success. Never underestimate the power of networking. Building relationships with peers, professors, and professionals in your field can open doors to opportunities you may not have considered. Finally, take advantage of every opportunity that comes your way. Whether it's internships(related to your field only), research projects, or joining a student club, these experiences will help you grow both personally and professionally.",
+      registrationDate: "2024-03-07",
+      bloodGroup: "AB+",
+      age: 42,
+      gender: "Male",
+      appointmentDetails: "12/2/2023, 12:30 PM",
+      lastBookingDetails: "28/1/2023, 12:20 AM",
+      diagnosisReport: "/reports/diagnosis1.pdf",
+      prescriptionReport: "/reports/prescription1.pdf"
+    },
+    {
+      SN: 2,
+      name: "Charan Narakula",
+      designation: "Founder-CodeOHOlics| Palo alto networks",
+      time: "Time management is crucial. Balancing academics, projects, and extracurricular activities can be challenging, but mastering this skill early on will set you up for success. Never underestimate the power of networking. Building relationships with peers, professors, and professionals in your field can open doors to opportunities you may not have considered. Finally, take advantage of every opportunity that comes your way. Whether it's internships(related to your field only), research projects, or joining a student club, these experiences will help you grow both personally and professionally.",
+      registrationDate: "2024-03-07",
+      bloodGroup: "AB+",
+      age: 42,
+      gender: "Male",
+      appointmentDetails: "12/2/2023, 12:30 PM",
+      lastBookingDetails: "28/1/2023, 12:20 AM",
+      diagnosisReport: "/reports/diagnosis1.pdf",
+      prescriptionReport: "/reports/prescription1.pdf"
+    }
+    
+  ]);
+  
+   // Initial dummy data
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    setUploadedFile(file);
-    // Do something with the selected file
+    const [popupAppointment, setPopupAppointment] = useState(null); // Define state variable
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedDate, setSelectedDate] = useState('');
+    const [filteredData, setFilteredData] = useState(dummyData); // State to hold filtered data
+  
+
+
+    const recordsPerPage = 8;
+    const totalPages = Math.ceil(dummyData.length / recordsPerPage);
+
+  const currentPageData=dummyData;
+  const [currentPage, setCurrentPage] = useState(1); // Current page number
+ 
+  const handleAddDoctorClick = () => {
+    setShowAddDoctorPopup(true);
+  };
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      filterData(searchQuery, selectedDate);
+    }
   };
 
-  const handleDragOver = (event) => {
-    event.preventDefault();
-    setIsDragging(true);
+  const filterData = (query, date) => {
+    let filtered = dummyData;
+    if (date) {
+      filtered = filtered.filter(record => record.registrationDate === date);
+    }
+    if (query) {
+      const lowerCaseQuery = query.toLowerCase();
+      filtered = filtered.filter(record =>
+        record.SN.toString().includes(lowerCaseQuery) ||
+        record.name.toLowerCase().includes(lowerCaseQuery) ||
+        record.designation.toLowerCase().includes(lowerCaseQuery) ||
+        (record.contact && record.contact.toLowerCase().includes(lowerCaseQuery))
+      );
+    }
+    setFilteredData(filtered);
+  };
+  
+  
+
+  const handleSearchChange = (event) => {
+    const query = event.target.value.toLowerCase();
+    setSearchQuery(query);
+    filterData(query, selectedDate);
   };
 
-  const handleDragEnter = (event) => {
-    event.preventDefault();
-    setIsDragging(true);
+  const handleDateChange = (event) => {
+    const date = event.target.value;
+    setSelectedDate(date);
+    filterData(searchQuery, date);
   };
-
-  const handleDragLeave = (event) => {
-    event.preventDefault();
-    setIsDragging(false);
-  };
-
-  const handleDrop = (event) => {
-    event.preventDefault();
-    setIsDragging(false);
-    const file = event.dataTransfer.files[0];
-    setUploadedFile(file);
-    // Do something with the dropped file
-  };
-
-  const handleViewFile = () => {
-    // Implement logic to view the uploaded file
-    console.log("View file:", uploadedFile);
-  };
+  const handleAddDoctor = (newDoctor) => {
+    setFilteredData([...filteredData, newDoctor]);
+    setDummyData([...dummyData, newDoctor]); // Update dummyData as well
+    setShowAddDoctorPopup(false);
+    };
 
   return (
     <div className="content">
@@ -84,39 +147,55 @@ const AdsPage = () => {
     </li>
   </ul>
 </nav>
-      <div className="dashboard-data">
-      <div className="head-data">
-          <h1>About us </h1>
-           <p>we are codeOholics</p>
+<div className="dashboard-data">
+            {/* Your dashboard data content here */}
+            {/* For example: */}
+            <center> <h2>The Holics drop</h2></center>
+
+               <div className="topbartable">
+            <div className="fields">
+          <div className="field">
+            <label htmlFor="search">Search</label>
+            <input type="text" id="search" value={searchQuery} onChange={handleSearchChange} onKeyPress={handleKeyPress} placeholder="Search..." />
           </div>
-        <div
-          className={`${styles.dragDropBlock} ${isDragging ? styles.dragging : ''}`}
-          onDragOver={handleDragOver}
-          onDragEnter={handleDragEnter}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
-        >
-          <img src="images/cloud-icon.png" alt="Cloud Icon" className={styles.cloudIcon} />
-          <p>Drag & Drop files here</p>
-          <label htmlFor="fileInput" className={styles.fileButton}>Browse Files</label>
-          <input
-            type="file"
-            id="fileInput"
-            className={styles.fileInput}
-            onChange={handleFileChange}
-            hidden
-          />
-          <p className={styles.fileType}>File should be jpeg, png, or pdf</p>
-          <p className={styles.maxSize}>Max size 50 MB</p>
-        </div>
-        {uploadedFile && (
-          <div className={styles.uploadedFileSection}>
-            <p>Uploaded File: {uploadedFile.name}</p>
-            <button onClick={handleViewFile}>View</button>
-          </div>
-        )}
+            <div>
       </div>
-    </div>
+        </div>
+      
+          </div>
+          <div className={styles.appointmentcontainer}>
+        {filteredData.map(appointment => (
+          <div key={appointment.SN} className={styles.card}>
+            <img src="/images/image.png" alt="Doctor" className={styles.image} />
+            <button className={styles.viewMore} onClick={() => handleViewMoreClick(appointment)}>View More</button>
+            <h2 className={styles.name}>{appointment.name}</h2>
+            <p className={styles.designation}><em>{appointment.designation}</em></p>
+            <p className={styles.time}><em>{appointment.time}</em></p>
+          </div>
+    ))}
+  </div>
+      
+          <div className="pagination">
+            <div className="pagination">
+              Page {currentPage} of {totalPages}
+            </div>
+            <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+              &laquo; Prev
+            </button>
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button key={index} onClick={() => handlePageChange(index + 1)} className={currentPage === index + 1 ? 'active' : ''}>
+                {index + 1}
+              </button>
+            ))}
+            <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+              Next &raquo;
+            </button>
+          </div>
+        </div>
+        {popupAppointment && (
+        <AppointmentDetailsPopup appointment={popupAppointment} onClose={() => setPopupAppointment(null)} />
+      )}
+      </div>
   );
 };
 

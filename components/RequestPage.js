@@ -5,6 +5,7 @@ import Image from 'next/image';
 import AddDoctorPopup from './AddDoctorPopup';
 import AppointmentDetailsPopup from './AppointmentDetailsPopup'; 
 const RequestPage = () => {
+
   const router = useRouter();
   const [showAddDoctorPopup, setShowAddDoctorPopup] = useState(false);
   const handleViewMoreClick = (appointment) => {
@@ -218,7 +219,7 @@ const RequestPage = () => {
           <div className="dashboard-data">
             {/* Your dashboard data content here */}
             {/* For example: */}
-<div className="topbartable">
+               <div className="topbartable">
             <h2>CORE team  members</h2>
             <div className="fields">
           <div className="field">
@@ -239,7 +240,7 @@ const RequestPage = () => {
             <img src="/images/image.png" alt="Doctor" className={styles.image} />
             <h2 className={styles.name}>{appointment.name}</h2>
             <p className={styles.designation}><em>{appointment.designation}</em></p>
-            <p className={styles.time}><em>{appointment.time}</em></p>
+            {/* <p className={styles.time}><em>{appointment.time}</em></p> */}
             <button className={styles.viewMore} onClick={() => handleViewMoreClick(appointment)}>View More</button>
           </div>
     ))}
