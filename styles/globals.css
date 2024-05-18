@@ -216,7 +216,7 @@ body {
 .box {
   
   background: RGB(241, 0, 255) ;
-  background: linear-gradient(340deg, rgba(253,0,255,1) 0%, rgba(158,0,255,1) 0%);
+  background: linear-gradient(340deg, rgba(253,0,255,1) 0%, rgba(26, 34, 56) 0%);
   color: rgb(255, 255, 255);
   border: 1.5px solid hsl(0, 9%, 83%); /* Set border color */
   border-radius: 15px;
@@ -224,8 +224,9 @@ body {
   height: auto; /* Set height */
   padding: 20px;
   margin-right: 20px; /* Add margin between boxes */
-  opacity: 0.7;
+  opacity: 0.9;
   transition: ease 0.344s;
+  text-align: center;
 }
 
 .box:hover{
@@ -242,12 +243,14 @@ body {
 
 }
 
+
 .box a:hover{
   opacity: 1;
   letter-spacing: 2px;
   font-size: 1.1rem;
   
 }
+
 .box:last-child {
   margin-right: 0; /* Remove margin for the last box */
 }
@@ -412,7 +415,10 @@ th {
 .video-cards-grid {
   /* background: red; */
   display: flex;
-  justify-content: center;
+  /* margin-left: -50px; */
+  height: auto;
+  width: 1200px;
+  /* justify-content: center; */
   align-items: center;
   padding: 50px;
   overflow: scroll;
@@ -420,15 +426,53 @@ th {
 }
 
 .video-card {
-  /* background: blue; */
-  width: 50%;
+  border-radius: 20px;
+  background: rgb(124, 222, 205);
+  width: auto;
   display: flex;
   flex-direction: column-reverse;
+  /* Add the styles from .box class for hover effects */
+  background: RGB(241, 0, 255);
+  background: linear-gradient(340deg, rgb(39, 235, 225) 0%, rgb(26, 34, 56) 0%);
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+ 
+  /* width: 250px; */
+  height: auto;
+  padding: 20px;
+  margin: 10px;
+  opacity: 0.9;
+  transition: ease 0.344s;
 }
+
+.video-card:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  margin-right: 20px;
+}
+
+.video-card a {
+  color: white;
+  opacity: 0.9;
+  transition: ease 0.344s;
+}
+
+.video-card a:hover {
+  opacity: 1;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 
 .video-card h2 {
   font-size: 18px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .video-card p {
@@ -485,14 +529,14 @@ th {
   .box:last-child {
     margin-right: 0; /* Remove margin for the last box */
   }
-  
-  
-  
-  
-  
-  .healthkare {
-    font-size: 20px; /* Adjust font size for healthkare */
+  h2{
+    font-size: 2.9rem;
   }
+  p{
+    font-size: 1.9rem;
+  }
+  
+   
   
   .vertical-navbar {
     display: flex;
@@ -505,12 +549,13 @@ th {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 20px;
+    font-size: 20px;
   }
   
   .dashboard-data {
     background-color: #fff;
-    width: 1300px;
-    height: 2600px;
+    width: 1310px;
+    height: 2700px;
     overflow-y: scroll;
     padding: 20px;
     flex: 1 1;
@@ -532,9 +577,13 @@ th {
     margin-left: 50px;
     margin-bottom: 10px; /* Adjust the spacing between items */
   }
-  
+  .vertical-navbar .nav-item a {
+    font-size: 40px; /* Increase font size for mobile screens */
+  }
   .nav-item a {
-    text-decoration: none;
+    /* text-decoration: none; */
+    font-size: 20px;
+
     color: #fff; /* Change the text color as desired */
     margin-left: 5px; /* Adjust the spacing between icon and text */
   }
@@ -568,6 +617,7 @@ th {
   }
   
   .box {
+   
     display: flex;
     text-align: center;
     flex-direction: row;
@@ -586,13 +636,20 @@ th {
   .fields {
     flex-direction: column; /* Stack fields vertically */
   }
+  .video-cards-grid h2{
+    font-size: 30px;
+  }
+  .video-cards-grid p{
+    font-size: 20px;
+  }
   
   .video-cards-grid {
+    
     /* background: red; */
     margin-left: 20px;
     display: grid; /* Use grid layout for the cards */
     grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding: 50px;
     gap: 40px;
@@ -609,8 +666,9 @@ th {
     border-radius: 10px; /* Add rounded corners */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    margin-left: 20px;
   }
   
   .table-container th,

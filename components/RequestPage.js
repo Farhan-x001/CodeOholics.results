@@ -13,103 +13,75 @@ const RequestPage = () => {
   };
   const [dummyData, setDummyData] = useState([
     {
-      SN: 1,
-      name: "Moid uddin",
-      designation: "Events lead",
-      time: "10:00 AM - 12:00 PM",
-      registrationDate: "2024-03-07",
-      bloodGroup: "AB+",
-      age: 42,
-      gender: "Male",
-      appointmentDetails: "12/2/2023, 12:30 PM",
-      lastBookingDetails: "28/1/2023, 12:20 AM",
-      diagnosisReport: "/reports/diagnosis1.pdf",
-      prescriptionReport: "/reports/prescription1.pdf"
-    },
-    {
-      SN: 2,
-      name: "Veda",
-      designation: "Outreach",
-      time: "02:00 PM - 04:00 PM",
-      registrationDate: "2024-03-07",
-      bloodGroup: "A-",
-      age: 35,
-      gender: "Female",
-      appointmentDetails: "15/2/2023, 3:45 PM",
-      lastBookingDetails: "30/1/2023, 11:10 AM",
-      diagnosisReport: "/reports/diagnosis2.pdf",
-      prescriptionReport: "/reports/prescription2.pdf"
-    },
-    {
-      SN: 3,
-      name: "chetan sirigi",
-      designation: "dev lead ",
-      time: "09:00 AM - 11:00 AM",
-      registrationDate: "2024-03-08",
-      bloodGroup: "B+",
-      age: 50,
-      gender: "Male",
-      appointmentDetails: "20/2/2023, 10:15 AM",
-      lastBookingDetails: "25/1/2023, 09:45 AM",
-      diagnosisReport: "/reports/diagnosis3.pdf",
-      prescriptionReport: "/reports/prescription3.pdf"
-    },
-    {
-      SN: 4,
-      name: "Farhan Ahmed",
-      designation: "President",
-      time: "03:00 PM - 05:00 PM",
-      registrationDate: "2024-03-08",
-      bloodGroup: "O+",
-      age: 48,
-      gender: "Male",
-      appointmentDetails: "18/2/2023, 4:00 PM",
-      lastBookingDetails: "27/1/2023, 1:30 PM",
-      diagnosisReport: "/reports/diagnosis4.pdf",
-      prescriptionReport: "/reports/prescription4.pdf"
-    },
-    {
-      SN: 5,
-      name: "Leo nikhil",
-      designation: "vice president",
-      time: "11:00 AM - 01:00 PM",
-      registrationDate: "2024-03-09",
-      bloodGroup: "A+",
-      age: 40,
-      gender: "Female",
-      appointmentDetails: "25/2/2023, 11:45 AM",
-      lastBookingDetails: "29/1/2023, 10:50 AM",
-      diagnosisReport: "/reports/diagnosis5.pdf",
-      prescriptionReport: "/reports/prescription5.pdf"
-    },
-    {
-      SN: 6,
-      name: "Shaibaz Ahmed",
-      designation: "Cp lead",
-      time: "01:00 PM - 03:00 PM",
-      registrationDate: "2024-03-09",
-      bloodGroup: "B-",
-      age: 55,
-      gender: "Male",
-      appointmentDetails: "22/2/2023, 2:30 PM",
-      lastBookingDetails: "26/1/2023, 3:20 PM",
-      diagnosisReport: "/reports/diagnosis6.pdf",
-      prescriptionReport: "/reports/prescription6.pdf"
-    },
-    {
-      SN: 7,
-      name: "Hyder ali",
-      designation: "tech head",
-      time: "01:00 PM - 03:00 PM",
-      registrationDate: "2024-03-09",
-      bloodGroup: "B-",
-      age: 55,
-      gender: "Male",
-      appointmentDetails: "22/2/2023, 2:30 PM",
-      lastBookingDetails: "26/1/2023, 3:20 PM",
-      diagnosisReport: "/reports/diagnosis6.pdf",
-      prescriptionReport: "/reports/prescription6.pdf"
-    }
+      id: 1,
+      name: 'Farhan Ahmed',
+      image: '/images/farhan.png',
+      designation: 'President',
+      year: '3rd',
+      courseSection: 'Computer Science - Section C',
+      phno: '9502527812',
+      linkedinProfile: 'https://www.linkedin.com/in/farhan-ahmed-63324b242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+  },
+  {
+    SN: 2,
+    name: "Veda Nayini",
+    image: '/images/veda.png',
+    designation: 'Outreach Lead',
+    year: '2rd',
+    courseSection: 'Computer Science - Section D',
+    phno: '+91 90008 70630',
+    linkedinProfile: 'https://www.linkedin.com/in/veda-nayini-376026277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+  },
+  {
+    SN: 3,
+    name: "chetan sirigi",
+    image: '/images/chetan.png',
+    designation: 'Dev lead',
+    year: '2rd',
+    courseSection: 'CSM - Section B',
+    phno: '+91 79898 42906',
+    linkedinProfile: 'https://www.linkedin.com/in/chetan-sirigiri?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+  },
+  {
+    SN: 4,
+    name: "Moid Uddin",
+    image: '/images/moid.png',
+    designation: 'Events lead',
+    year: '3rd',
+    courseSection: 'AIML - Section B',
+    phno: '+91 97004 43234',
+    linkedinProfile: 'https://www.linkedin.com/in/moiduddinahmed-79a94923b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+  },
+  {
+    SN: 5,
+    name: "Leo nikhil",
+    image: '/images/leo.png',
+    designation: "vice president",
+    year: '3rd',
+    courseSection: 'CSM - Section B',
+    phno: '+91 83091 09430',
+    linkedinProfile: 'https://www.linkedin.com/in/leo-nikhil-mothukuri-5169b021a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+  },
+  {
+    SN: 6,
+    name: "Shaibaz Ahmed",
+    image: '/images/shaibaz.png',
+    designation: "CP-lead",
+    year: '3rd',
+    courseSection: 'CSE - Section A',
+    phno: '+91 79952 79643',
+    linkedinProfile: 'https://www.linkedin.com/in/chetan-sirigiri?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+  },
+  {
+    SN: 7,
+    name: "Hyder Ali",
+    image: '/images/hyder.png',
+    designation: "Tech-Lead",
+    year: '3rd',
+    courseSection: 'CSM - Section B',
+    phno: '+91 87904 88175',
+    linkedinProfile: 'https://www.linkedin.com/in/shaik-hyder-ali-694765240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+  }
   ]);
   
    // Initial dummy data
@@ -192,25 +164,25 @@ const RequestPage = () => {
     </li>
     <li>
       <div className="nav-item">
-        <Image src="/images/hospital.png" alt="" width={30} height={30} />
+        <Image src="/images/result.png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/hospitals')}>Results</a>
       </div>
     </li>
     <li>
       <div className="nav-item1">
-        <Image src="/images/din.png" alt="" width={30} height={30} />
+        <Image src="/images/dasin (5).png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/request')}>Leads</a>
       </div>
     </li>
     <li>
       <div className="nav-item">
-        <Image src="/images/p1.png" alt="" width={30} height={30} />
+        <Image src="/images/inte.png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/patient')}>team</a>
       </div>
     </li>
     <li>
       <div className="nav-item">
-        <Image src="/images/ads.png" alt="" width={30} height={30} />
+        <Image src="/images/about.png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/ads')}>About</a>
       </div>
     </li>
@@ -237,7 +209,7 @@ const RequestPage = () => {
           <div className={styles.appointmentcontainer}>
         {filteredData.map(appointment => (
           <div key={appointment.SN} className={styles.card}>
-            <img src="/images/image.png" alt="Doctor" className={styles.image} />
+            <img src={appointment.image} alt="Doctor" className={styles.image} />
             <h2 className={styles.name}>{appointment.name}</h2>
             <p className={styles.designation}><em>{appointment.designation}</em></p>
             {/* <p className={styles.time}><em>{appointment.time}</em></p> */}

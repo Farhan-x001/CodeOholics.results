@@ -37,35 +37,70 @@ const HomePage = () => {
       id: 1,
       title: "Code With harry",
       link: "https://www.codewithharry.com/",
-      imageSrc: "/images/ab1.png",
+      imageSrc: "/images/codewithharry.png",
       altText: "Icon 1",
-      description: "Strivers DSA A-Z",
+      description: "The Ultimate hub for devs",
     },
     {
       id: 2,
       title: "Roadmap SDE2024",
       link: "https://github.com/KushalVijay/GetHiredRoadmap2024",
-      imageSrc: "/images/db1.png",
+      imageSrc: "/images/Kushal.png",
       altText: "Icon 2",
-      description: "geeksforgeeks archives",
+      description: "KushalVijay Special",
     },
     {
       id: 3,
       title: "Projects At ease",
       link: "https://www.youtube.com/@LamaDev",
-      imageSrc: "/images/mb1.png",
+      imageSrc: "/images/lama1.png",
       altText: "Icon 3",
-      description: "Interview bit",
+      description: "Find best projects",
     },
     {
       id: 3,
       title: "microsoft-dev",
       link: "https://github.com/microsoft/Web-Dev-For-Beginners",
-      imageSrc: "/images/mb1.png",
+      imageSrc: "/images/microsoft.png",
       altText: "Icon 3",
-      description: "Interview bit",
+      description: "The top class repo!",
     },
   ];
+  const boxData1 = [
+    {
+      id: 1,
+      title: "Glassdoor",
+      link: "https://www.glassdoor.co.in/Community/index.htm",
+      imageSrc: "/images/glassodor.png",
+      altText: "Icon 1",
+      description: "Get insights about placement drives.",
+    },
+    {
+      id: 2,
+      title: "GFG-Campus archives",
+      link: "https://www.geeksforgeeks.org/tag/on-campus/",
+      imageSrc: "/images/gfg.png",
+      altText: "Icon 2",
+      description: "Get interview experiences, difficulty level, and detailed interview information.",
+    },
+    {
+      id: 3,
+      title: "InterviewBit",
+      link: "https://www.interviewbit.com/coding-interview-questions/",
+      imageSrc: "/images/interviewbit.png",
+      altText: "Icon 3",
+      description: "Solve CS fundamentals, MCQs, and round 1 CS questions.",
+    },
+    {
+      id: 4,
+      title: "FreeCodeCamp",
+      link: "https://www.freecodecamp.org/",
+      imageSrc: "/images/freecodecamp.png",
+      altText: "Icon 4",
+      description: "Improve your skills with mini-courses and get free certifications.",
+    },
+];
+
   const dummyData = [
     {
       SN: 1,
@@ -109,7 +144,7 @@ const HomePage = () => {
             <li>
               <div className="nav-item">
                 <Image
-                  src="/images/hospital.png"
+                  src="/images/result.png"
                   alt=""
                   width={30}
                   height={30}
@@ -119,19 +154,19 @@ const HomePage = () => {
             </li>
             <li>
               <div className="nav-item">
-                <Image src="/images/Doctor.png" alt="" width={30} height={30} />
+                <Image src="/images/team.png" alt="" width={30} height={30} />
                 <a onClick={() => router.push("/request")}>Leads</a>
               </div>
             </li>
             <li>
               <div className="nav-item">
-                <Image src="/images/p1.png" alt="" width={30} height={30} />
+                <Image src="/images/inte.png" alt="" width={30} height={30} />
                 <a onClick={() => router.push("/patient")}>Patients</a>
               </div>
             </li>
             <li>
               <div className="nav-item">
-                <Image src="/images/ads.png" alt="" width={30} height={30} />
+                <Image src="/images/about.png" alt="" width={30} height={30} />
                 <a onClick={() => router.push("/ads")}>Ads Banner</a>
               </div>
             </li>
@@ -159,8 +194,8 @@ const HomePage = () => {
                 <h2>{video.title}</h2>
                 <p>{video.subTitle}</p>
                 <iframe
-                  width="280"
-                  height="157.5"
+                  width="350"
+                  height="250"
                   src={video.videoUrl}
                   title={video.title}
                   frameBorder="0"
@@ -174,10 +209,10 @@ const HomePage = () => {
 
 
           <div className="video-cards-grid">
-  {boxData.map((box) => (
+  {boxData1.map((box) => (
     <div key={box.id} className="video-card">
       <h2>{box.title}</h2>
-      <p>{box.subTitle}</p>
+      <p>{box.description}</p>
       <a href={box.link}>
         <img
           src={box.imageSrc}

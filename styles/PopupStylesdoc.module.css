@@ -30,14 +30,23 @@
     height: 2px;
     width: 100%;
   }
-  
+  .image {
+    width: 200px;
+    height: 50%;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
   .popupContent img {
     max-width: 10%;
     display: block;
     outline: #858789 auto 3px;
     border-radius: 20px;
     margin: auto;
-    height: auto;
+    height: 50%;
     margin-bottom: 20px;
   }
   
@@ -81,6 +90,17 @@ margin: 350px 0px 10px 0px;
 width: 200px;
     height: auto; 
 }
+.linkedinButton {
+  padding: 8px 16px;
+  background-color: #0e76a8; /* LinkedIn blue color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  margin-left: 120px;
+}
 .image3 {
 position: absolute;
 top: -190px;
@@ -88,4 +108,64 @@ right: -100px;
 width: 200px;
 height: auto;
 transform: translate(-50%, 50%);
+}@media only screen and (max-width: 600px) {
+  /* Adjustments for Mobile Screens */
+  .popup {
+    width: 80%;
+    height: 40%; /* Increase width for better visibility on smaller screens */
+  }
+.image{
+  width: 400px;
+  height: auto;
+}
+  .popupContent img {
+    width: 1200px; /* Increase image size on smaller screens */
+  }
+  .formGroup{
+    font-size: 40px;
+  }
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 40px;
+  }
+  .popupContent h2{
+    font-size: 70px;
+
+  }
+  .formGroup label{
+    font-size: 40px;
+  }
+  /* YourStyles.module.css */
+
+.linkedinButton {
+  padding: 8px 16px;
+  background-color: #0e76a8; /* LinkedIn blue color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  margin-left: 120px;
+}
+
+.linkedinButton:hover {
+  background-color: #0b548c; /* Darker shade of LinkedIn blue on hover */
+}
+
+  .popupButton {
+    padding: 12px 24px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #ff6f00;
+    color: #fff;
+  }
+
+  .popupButton:hover {
+    background-color: #0056b3;
+  }
+
+  .popupButton p {
+    margin: 0; /* Remove default margin from <p> */
+  }
 }

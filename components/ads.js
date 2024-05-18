@@ -123,25 +123,25 @@ const AdsPage = () => {
     </li>
     <li>
       <div className="nav-item">
-        <Image src="/images/hospital.png" alt="" width={30} height={30} />
+        <Image src="/images/result.png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/hospitals')}>Results</a>
       </div>
     </li>
     <li>
       <div className="nav-item">
-        <Image src="/images/Doctor.png" alt="" width={30} height={30} />
+        <Image src="/images/team.png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/request')}>Leads</a>
       </div>
     </li>
     <li>
       <div className="nav-item">
-        <Image src="/images/p1.png" alt="" width={30} height={30} />
+        <Image src="/images/inte.png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/patient')}>Team</a>
       </div>
     </li>
     <li>
       <div className="nav-item1">
-        <Image src="/images/adin.png" alt="" width={30} height={30} />
+        <Image src="/images/dasin (3).png" alt="" width={30} height={30} />
         <a onClick={() => router.push('/ads')}>About Us</a>
       </div>
     </li>

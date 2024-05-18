@@ -135,6 +135,46 @@ ul.horizontalnavbar{
   margin-left: 900px;
   /* margin: 10px; */
 }
+.thanks {
+  background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+  border: 1px solid #f08a5d;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Georgia', serif;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.thanks h2 {
+  color: #f08a5d;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.thanks p {
+  color: #6a6a6a;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.thanks p:last-child {
+  margin-bottom: 0;
+}
+
+.thanks p br {
+  margin-bottom: 10px;
+}
+
+.thanks p::first-letter {
+  font-size: 22px;
+  color: #f08a5d;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
   .appointmentcontainer {
     display: grid;
@@ -197,6 +237,47 @@ ul.horizontalnavbar{
   /* margin-bottom: 0px; */
   font-size: 30px; /* Decreased font size */
 }
+.thanks {
+  background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+  border: 1px solid #f08a5d;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Georgia', serif;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.thanks h2 {
+  color: #f08a5d;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.thanks p {
+  color: #6a6a6a;
+  font-size: 29px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.thanks p:last-child {
+  margin-bottom: 0;
+}
+
+.thanks p br {
+  margin-bottom: 10px;
+}
+
+.thanks p::first-letter {
+  font-size: 29px;
+  color: #f08a5d;
+  font-weight: bold;
+}
+
   
 }
   

@@ -46,6 +46,7 @@ ul.horizontalnavbar{
   height: 71px; /* One-fourth of 142px */
   margin: 0 auto 0px; /* Center the image and add bottom margin */
   display: block;
+  border-radius: 10px;
 }
 .appointmentcontainer {
   display: grid;
