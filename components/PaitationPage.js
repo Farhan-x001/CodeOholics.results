@@ -228,7 +228,7 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
         Dear Pannel,
       </p>
       <p>
-        On behalf of CodeOholics, I want to extend our heartfelt gratitude to you for your invaluable time and effort in selecting members for our Membership Drive '24. Your dedication and keen judgment have played a crucial role in identifying the right talent to join our community.
+        On behalf of CodeOholics, I want to extend our heartfelt gratitude to you for your invaluable time and effort in selecting members for our Membership Drive 2k24. Your dedication and keen judgment have played a crucial role in identifying the right talent to join our community.
       </p>
       <p>
         Your insights and feedback during the interview process have not only helped us in choosing exceptional candidates but have also contributed to upholding the standards and values that CodeOholics stands for. We appreciate your commitment to fostering a community of passionate and skilled individuals who will drive our mission forward.
