@@ -175,7 +175,7 @@ const HomePage = () => {
         <div className="dashboard-data">
         <div className="quote-box">
     <p>
-      "Alan Kay once said, 'The best way to predict the future is to invent it.' Keep coding and innovating!"
+      `Alan Kay once said,The best way to predict the future is to invent it.Keep coding and innovating!`
     </p>
     <style jsx>{`
       .quote-box {

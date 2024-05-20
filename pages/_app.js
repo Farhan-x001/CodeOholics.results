@@ -1,6 +1,7 @@
 // Import necessary dependencies
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import LandingPage from '../components/LandingPage';
 import DoctorLoginPage from '../components/DoctorLoginPage';
 import HospitalLoginPage from '../components/HospitalLoginPage';
