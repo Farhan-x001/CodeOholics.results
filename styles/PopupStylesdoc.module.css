@@ -112,7 +112,7 @@ transform: translate(-50%, 50%);
   /* Adjustments for Mobile Screens */
   .popup {
     width: 80%;
-    height: 40%; /* Increase width for better visibility on smaller screens */
+    height: 51%; /* Increase width for better visibility on smaller screens */
   }
 .image{
   width: 400px;
