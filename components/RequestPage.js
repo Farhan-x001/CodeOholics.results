@@ -25,7 +25,7 @@ const RequestPage = () => {
   {
     SN: 2,
     name: "Veda Nayini",
-    image: '/images/veda.png',
+    image: '/images/veda.jpeg',
     designation: 'Outreach Lead',
     year: '2rd',
     courseSection: 'Computer Science - Section D',
@@ -35,7 +35,7 @@ const RequestPage = () => {
   {
     SN: 3,
     name: "chetan sirigi",
-    image: '/images/chetan.png',
+    image: '/images/chetan.JPG',
     designation: 'Dev lead',
     year: '2rd',
     courseSection: 'CSM - Section B',
@@ -45,7 +45,7 @@ const RequestPage = () => {
   {
     SN: 4,
     name: "Moid Uddin",
-    image: '/images/moid.png',
+    image: '/images/moid.jpeg',
     designation: 'Events lead',
     year: '3rd',
     courseSection: 'AIML - Section B',
@@ -65,7 +65,7 @@ const RequestPage = () => {
   {
     SN: 6,
     name: "Shaibaz Ahmed",
-    image: '/images/shaibaz.png',
+    image: '/images/shaibaz.jpeg',
     designation: "CP-lead",
     year: '3rd',
     courseSection: 'CSE - Section A',
@@ -75,7 +75,7 @@ const RequestPage = () => {
   {
     SN: 7,
     name: "Hyder Ali",
-    image: '/images/hyder.png',
+    image: '/images/hyder.jpeg',
     designation: "Tech-Lead",
     year: '3rd',
     courseSection: 'CSM - Section B',
@@ -171,19 +171,19 @@ const RequestPage = () => {
     <li>
       <div className="nav-item1">
         <Image src="/images/dasin (5).png" alt="" width={30} height={30} />
-        <a onClick={() => router.push('/request')}>Leads</a>
+        <a onClick={() => router.push('/request')}>Core Team</a>
       </div>
     </li>
     <li>
       <div className="nav-item">
         <Image src="/images/inte.png" alt="" width={30} height={30} />
-        <a onClick={() => router.push('/patient')}>team</a>
+        <a onClick={() => router.push('/patient')}>Pannel</a>
       </div>
     </li>
     <li>
       <div className="nav-item">
         <Image src="/images/about.png" alt="" width={30} height={30} />
-        <a onClick={() => router.push('/ads')}>About</a>
+        <a onClick={() => router.push('/ads')}>About/views</a>
       </div>
     </li>
   </ul>
@@ -198,13 +198,13 @@ const RequestPage = () => {
             <label htmlFor="search">Search</label>
             <input type="text" id="search" value={searchQuery} onChange={handleSearchChange} onKeyPress={handleKeyPress} placeholder="Search..." />
           </div>
-            <div>
+            {/* <div>
             <button onClick={handleAddDoctorClick} className={styles.button}>+ add doctor</button>
-      </div>
+      </div> */}
         </div>
-      {showAddDoctorPopup && (
+      {/* {showAddDoctorPopup && (
         <AddDoctorPopup onClose={() => setShowAddDoctorPopup(false)} onAddDoctor={handleAddDoctor} />
-      )}
+      )} */}
           </div>
           <div className={styles.appointmentcontainer}>
         {filteredData.map(appointment => (

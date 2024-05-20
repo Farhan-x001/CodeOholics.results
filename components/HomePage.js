@@ -155,24 +155,41 @@ const HomePage = () => {
             <li>
               <div className="nav-item">
                 <Image src="/images/team.png" alt="" width={30} height={30} />
-                <a onClick={() => router.push("/request")}>Leads</a>
+                <a onClick={() => router.push("/request")}>Core Team</a>
               </div>
             </li>
             <li>
               <div className="nav-item">
                 <Image src="/images/inte.png" alt="" width={30} height={30} />
-                <a onClick={() => router.push("/patient")}>Patients</a>
+                <a onClick={() => router.push("/patient")}>Pannel</a>
               </div>
             </li>
             <li>
               <div className="nav-item">
                 <Image src="/images/about.png" alt="" width={30} height={30} />
-                <a onClick={() => router.push("/ads")}>Ads Banner</a>
+                <a onClick={() => router.push("/ads")}>About/views</a>
               </div>
             </li>
           </ul>
         </nav>
         <div className="dashboard-data">
+        <div className="quote-box">
+    <p>
+      "Alan Kay once said, 'The best way to predict the future is to invent it.' Keep coding and innovating!"
+    </p>
+    <style jsx>{`
+      .quote-box {
+        width: 80%;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #FF7E5F, #FFA387);
+        color: #ffffff;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    `}</style>
+  </div>
           <div className="headtxt"><center><h1>Best resources for DSA & DEV</h1></center></div>
         <div className="boxline">
           {boxData.map((box) => (

@@ -33,7 +33,7 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
       {
         SN: 3,
         name: "chetan sirigi",
-        image: '/images/chetan.png',
+        image: '/images/chetan.JPG',
         designation: 'Dev lead',
         year: '2rd',
         courseSection: 'CSM - Section B',
@@ -44,10 +44,10 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
       {
         SN: 4,
         name: "Mohd Ibrahim",
-        image: '/images/Kushal.png',
+        image: '/images/ibrahim.jpeg',
         designation: 'EX-vice President',
         year: 'class-24',
-        courseSection: 'CSE-D',
+        courseSection: 'CSD',
         phno: '6304415807',
         linkedinProfile: 'https://www.linkedin.com/in/moiduddinahmed-79a94923b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
       },
@@ -74,7 +74,7 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
       {
         SN: 7,
         name: "Hyder Ali",
-        image: '/images/hyder.png',
+        image: '/images/hyder.jpeg',
         designation: "Tech-Lead",
         year: '3rd',
         courseSection: 'CSM - Section B',
@@ -170,7 +170,7 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
     <li>
       <div className="nav-item">
         <Image src="/images/dashboard.png" alt="" width={30} height={30} />
-        <a onClick={() => router.push('/home')}>Home</a>
+        <a onClick={() => router.push('/home')}>Dashboard</a>
       </div>
     </li>
     <li>
@@ -182,19 +182,19 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
     <li>
       <div className="nav-item">
         <Image src="/images/team.png" alt="" width={30} height={30} />
-        <a onClick={() => router.push('/request')}>Leads</a>
+        <a onClick={() => router.push('/request')}>Core Team</a>
       </div>
     </li>
     <li>
       <div className="nav-item1">
         <Image src="/images/int.png" alt="" width={30} height={30} />
-        <a onClick={() => router.push('/patient')}>Team</a>
+        <a onClick={() => router.push('/patient')}>Pannel</a>
       </div>
     </li>
     <li>
       <div className="nav-item">
         <Image src="/images/about.png" alt="" width={30} height={30} />
-        <a onClick={() => router.push('/ads')}>About</a>
+        <a onClick={() => router.push('/ads')}>About/views</a>
       </div>
     </li>
   </ul>
@@ -203,7 +203,7 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
                       {/* Your dashboard data content here */}
                       {/* For example: */}
           <div className="topbartable">
-                      <h2>Our Team-Executive</h2>
+                      <h2>Our Pannel</h2>
                       <div className="fields">
                     <div className="field">
                       <label htmlFor="search">Search</label>

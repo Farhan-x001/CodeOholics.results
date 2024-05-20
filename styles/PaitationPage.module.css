@@ -46,6 +46,7 @@ ul.horizontalnavbar{
   height: 71px; /* One-fourth of 142px */
   margin: 0 auto 0px; /* Center the image and add bottom margin */
   display: block;
+  border-radius: 10px;
 }
 .appointmentcontainer {
   display: grid;
@@ -193,19 +194,22 @@ ul.horizontalnavbar{
   }
   .card {
     width: 350px;
-    height: 350px;
+    height: 400px;
   /* width: calc(25% - 80px);  */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   margin-bottom: 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e2ded1, #f5f4f2);
 }
 .image {
   width: 182px; /* One-fourth of 164px */
   height: 171px; /* One-fourth of 142px */
   margin: 0 auto 0px; /* Center the image and add bottom margin */
   display: block;
+  border-radius: 10px;
 }
 .name {
   /* margin-top: 2px; 
