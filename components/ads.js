@@ -50,7 +50,7 @@ const AdsPage = () => {
   {
     SN: 2,
     name: "Mahitha kalyani",
-    image: '/images/mahitha.JPG',
+    image: '/images/mahitha.png',
     time:' The experience is very nice...I didnt expect that Ill be engaging with them for soo long but the interviewees were soo active and enthusiastic that the interview lasted for almost an hour.So they made my job easy... and Thanks for choosing us. But we expect more involvement of the core and executive team of the Codeoholics club from next time...',
     designation: 'BZ alumini,events lead @intelclub',
     year: '3rd',

@@ -23,7 +23,7 @@ import AppointmentDetailsPopup from './AppointmentDetailsPopup';
       {
         SN: 2,
         name: "Mahitha kalyani",
-        image: '/images/mahitha.JPG',
+        image: '/images/mahitha.png',
         designation: 'BZ alumini,events lead @intelclub',
         year: '3rd',
         courseSection: 'Computer Science - Section c',
