@@ -1151,11 +1151,11 @@ const HospitalPage = () => {
                         {record.type}
                       </div>
                     </td>
-                    <td>
+                    {/* <td>
                       <button onClick={() => handleViewMoreClick(record)}>
                         View More
                       </button>
-                    </td>
+                    </td> */}
                   </tr>
                 ))}
               </tbody>
