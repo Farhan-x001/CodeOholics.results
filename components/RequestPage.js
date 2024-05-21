@@ -13,7 +13,7 @@ const RequestPage = () => {
   };
   const [dummyData, setDummyData] = useState([
     {
-      id: 1,
+      SN: 1,
       name: 'Farhan Ahmed',
       image: '/images/farhan.png',
       designation: 'President',
@@ -110,21 +110,22 @@ const RequestPage = () => {
   };
 
   const filterData = (query, date) => {
-    let filtered = dummyData;
+    let filtered = [...dummyData];
     if (date) {
       filtered = filtered.filter(record => record.registrationDate === date);
     }
     if (query) {
       const lowerCaseQuery = query.toLowerCase();
-      filtered = filtered.filter(record =>
-        record.SN.toString().includes(lowerCaseQuery) ||
-        record.name.toLowerCase().includes(lowerCaseQuery) ||
-        record.designation.toLowerCase().includes(lowerCaseQuery) ||
+      filtered = filtered.filter(record => 
+        (record.SN && record.SN.toString().includes(lowerCaseQuery)) ||
+        (record.name && record.name.toLowerCase().includes(lowerCaseQuery)) ||
+        (record.designation && record.designation.toLowerCase().includes(lowerCaseQuery)) ||
         (record.contact && record.contact.toLowerCase().includes(lowerCaseQuery))
       );
     }
     setFilteredData(filtered);
   };
+  
   
   
 

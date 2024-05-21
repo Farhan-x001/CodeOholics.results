@@ -1025,21 +1025,23 @@ const HospitalPage = () => {
     setPopupAppointment(appointment);
   };
 
-  const filterData = (query, department) => {
-    let filtered = dummyData;
-    if (department) {
-      filtered = filtered.filter(
-        (record) => record.department.toLowerCase() === department.toLowerCase()
+  const filterData = (query, date) => {
+    let filtered = [...dummyData];
+    if (date) {
+      filtered = filtered.filter(record => record.registrationDate === date);
+    }
+    if (query) {
+      const lowerCaseQuery = query.toLowerCase();
+      filtered = filtered.filter(record => 
+        (record.SN && record.SN.toString().includes(lowerCaseQuery)) ||
+        (record.name && record.name.toLowerCase().includes(lowerCaseQuery)) ||
+        (record.designation && record.designation.toLowerCase().includes(lowerCaseQuery)) ||
+        (record.rollno && record.rollno.toLowerCase().includes(lowerCaseQuery))
       );
     }
-    filtered = filtered.filter(
-      (record) =>
-        record.name.toLowerCase().includes(query.toLowerCase()) ||
-        record.rollno.toLowerCase().includes(query.toLowerCase())
-    );
     setFilteredData(filtered);
-    setCurrentPage(1);
   };
+  
 
   const handleSearchChange = (event) => {
     const query = event.target.value;
