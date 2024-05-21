@@ -23,7 +23,10 @@ function MyApp({ Component, pageProps }) {
   }, [isAuthenticated, router.pathname]); // Watch for changes in isAuthenticated and router pathname
 
   // Render the main app component with authentication props
-  return <Component {...pageProps} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />;
+  return(<>
+   <Component {...pageProps} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+   <Analytics />
+   </>);
 }
 
 export default MyApp; // Export the main app component as default
