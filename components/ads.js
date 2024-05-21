@@ -37,6 +37,15 @@ const AdsPage = () => {
       linkedinProfile: "https://www.linkedin.com/in/charan-narukulla?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
+      SN: 1,
+      name: "Sourabh Mahindrakar ",
+      designation: "Founder-CodeOHOlics| Cognida.ai",
+      image: '/images/sourabh.jpeg',
+      time: "Focus on academics primary pillar to get eligibility for placements and work on DSA and Development try to maintain balance between both and surround yourself with people from whom you can draw inspiration this will definitely help you to reach heights in the future.",
+      phno:"+91 79813 29412",
+      linkedinProfile: "https://www.linkedin.com/in/sourabh-mahindrakar-7459541b0/?originalSubdomain=in",
+    },
+    {
       id: 1,
       name: 'Farhan Ahmed',
       image: '/images/farhan.png',
@@ -51,7 +60,17 @@ const AdsPage = () => {
     SN: 2,
     name: "Mahitha kalyani",
     image: '/images/mahitha.png',
-    time:' The experience is very nice...I didnt expect that Ill be engaging with them for soo long but the interviewees were soo active and enthusiastic that the interview lasted for almost an hour.So they made my job easy... and Thanks for choosing us. But we expect more involvement of the core and executive team of the Codeoholics club from next time...',
+    time:` Helloo Juniors..!!
+    Happy to see your active participation in the membership drive. I feel like sharing these small lessons out of my experience in college. Hoping that they might be usefull.In the 1st year, don't stick to your classrooms, labs, records and exams...
+    Try to interact with as many people as possible. Maintain a decent GPA(for all 4 years)
+    
+    In the 2nd year of college, start exploring various technical and non-technical domains to find out where you're interested in and where you can build a strong career.
+    Improve your foundations and focus on DSA the most.
+    
+    In the 3rd year, start working on good projects which actually add up value to your resume. Don't do them for the sake of resume but instead dive deep into the learnings. By the end of your 3rd year, try to land into some internship and learn as much as possible.
+    All the best for your journey...!!!
+    
+    The experience of interviewing enthusiastic juniors was very nice. I didn't expect that I'll be engaging with them for so long but the interviewees were so active that the interview lasted for hours... They made my job easy. and Thanks for choosing us. But expecting that the core and executive team of Codeoholics will involve more in the upcoming events`,
     designation: 'BZ alumini,events lead @intelclub',
     year: '3rd',
     courseSection: 'Computer Science - Section c',
